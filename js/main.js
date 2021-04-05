@@ -118,6 +118,15 @@ var app = new Vue({
           contatto.messages.push(messaggio);
           this.inputext = '';
         }
+        window.setTimeout(function() {
+         let messaggio = {
+           date: new Date(),
+           text: 'ok',
+           status: 'received'
+          }
+          contatto.messages.push(messaggio);
+          this.inputext = '';
+       }, 1000);
       },
       eliminare: function(contacts, index, messaggio, i){
         console.log(i);
