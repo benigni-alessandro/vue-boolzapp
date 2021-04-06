@@ -29,6 +29,17 @@
 .none{
   display: none;
 }
+.dropdown-menu{
+  color: white;
+  background-color: #2B3033;
+}
+.dropdown-menu li a{
+  color: white;
+}
+.dropdown-menu li a:hover{
+  background-color: transparent;
+  color: white;
+}
 
 /* NAVBAR LEFT */
 .left-navbar{
@@ -204,11 +215,11 @@ hr{
 /* CHAT */
 .container.chat{
   background-image: url('../img/scuro.jpeg');
-  filter: brightness(60%);
   display: block;
   width: 100%;
   height: calc(100vh - 55px - 60px);
   padding: 20px 10%;
+  overflow-y: auto;
 }
 
 .messaggio{
@@ -329,7 +340,6 @@ hr{
   margin-right: 20px;
 }
 input:hover, input:focus, input:active{
-
   box-shadow: black;
   border: 0px;
   box-shadow: 0px 0px 0px 0px;
@@ -337,4 +347,32 @@ input:hover, input:focus, input:active{
 }
 .form-control:focus {
   box-shadow: 0px 0px 0px 0px;
+}
+@media screen and (min-width: 768px) and (max-width: 991px){
+  .navbar-nav{
+    flex-direction: row;
+    align-items: center;
+  }
+  ul.navbar-nav.me-auto.mb-2.mb-lg-0{
+    margin-bottom: 0px;
+  }
+   .mb-2 {
+    margin-bottom: 0!important;
+  }
+  #root{
+    display: flex;
+    height: auto;
+  }
+}
+@media screen and (max-width: 767px){
+  .navbar-nav{
+    flex-direction: row;
+    align-items: center;
+  }
+  ul.navbar-nav.me-auto.mb-2.mb-lg-0{
+    margin-bottom: 0px;
+  }
+   .mb-2 {
+    margin-bottom: 0!important;
+  }
 }

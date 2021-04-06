@@ -106,7 +106,7 @@ var app = new Vue({
         let data = new Date(date);
         let ore = data.getHours();
         let minuti = data.getMinutes();
-        return newdata = `${ore}:${minuti}`
+        return newdata = `${ore}:${minuti}`;
       },
       add: function (contatto) {
         if (this.inputext != '') {
