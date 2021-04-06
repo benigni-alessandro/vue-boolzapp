@@ -99,13 +99,11 @@ var app = new Vue({
     },
     methods:{
       selected: function(i) {
-        this.index = i
-
+        this.index = i;
       },
       data: function (date) {
         // console.log(date);
         let separa = date.split(' ');
-
         let array1 = separa[0].split('/');
         let nuova_data = array1[2] + '-' + array1[1] + '-' + array1[0];
         let nueva_data = nuova_data + ' ' + separa[1];
