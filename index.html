@@ -60,7 +60,9 @@
             <div class="bio">
               <span>{{contatto.name}}</span>
               <small
+              v-if="contatto.messages.length != 0"
               >{{contatto.messages[contatto.messages.length - 1].text}} {{data(contatto.messages[contatto.messages.length - 1].date)}}</small>
+              <small v-else>Nessun messaggio</small>
               <hr>
             </div>
             </div>

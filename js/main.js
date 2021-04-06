@@ -103,7 +103,13 @@ var app = new Vue({
 
       },
       data: function (date) {
-        let data = new Date(date);
+        // console.log(date);
+        let separa = date.split(' ');
+
+        let array1 = separa[0].split('/');
+        let nuova_data = array1[2] + '-' + array1[1] + '-' + array1[0];
+        let nueva_data = nuova_data + ' ' + separa[1];
+        let data = new Date(nueva_data);
         let ore = data.getHours();
         let minuti = data.getMinutes();
         return newdata = `${ore}:${minuti}`;
@@ -129,8 +135,11 @@ var app = new Vue({
        }, 1000);
       },
       eliminare: function(contacts, index, messaggio, i){
-        console.log(i);
-        contacts[index].messages.splice(i, 1)
+        contacts[index].messages.splice(i, 1);
+        console.log(contacts[index].messages);
+        if (contacts[index].messages.length == 0) {
+          this.index = i + 1
+        }
       }
    }
 });
