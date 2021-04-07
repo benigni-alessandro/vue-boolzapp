@@ -113,12 +113,16 @@ var app = new Vue({
       },
       add: function (contatto) {
         let data = new Date();
-        let oras = data.getHours();
-        let minutos = data.getMinutes();
-        let newda = `${oras}:${minutos}`;
+        giorno = data.getDay();
+        let mese = data.getMonth();
+        let date= data.getDate();
+        let year= data.getFullYear();
+        let ora = data.getHours();
+        let minuti= data.getMinutes();
+        let newd = `${ora}:${minuti}`;
         if (this.inputext != '') {
           let messaggio = {
-            newda,
+            date: newd,
             text: this.inputext,
             status: 'sent'
           }
@@ -127,7 +131,7 @@ var app = new Vue({
         }
         window.setTimeout(function() {
          let messaggio = {
-           newda,
+           date: newd,
            text: 'ok',
            status: 'received'
           }
