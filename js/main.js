@@ -113,10 +113,6 @@ var app = new Vue({
       },
       add: function (contatto) {
         let data = new Date();
-        giorno = data.getDay();
-        let mese = data.getMonth();
-        let date= data.getDate();
-        let year= data.getFullYear();
         let ora = data.getHours();
         let minuti= data.getMinutes();
         let newd = `${ora}:${minuti}`;
