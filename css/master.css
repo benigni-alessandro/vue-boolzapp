@@ -364,9 +364,93 @@ input:hover, input:focus, input:active{
   }
 }
 @media screen and (max-width: 767px){
+  #root{
+    display: flex;
+    flex-direction: column;
+  }
+  .image_profile{
+    border-radius: 50%;
+    height: 45px;
+    width: 45px;
+    border: 1px solid black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    background-color: white;
+    overflow: hidden;
+  }
+  .image_profile img{
+    height: 60px;
+    width: 60px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+  }
+  /* LEFT */
   .navbar-nav{
     flex-direction: row;
     align-items: center;
+  }
+  .left-navbar{
+    width: 100%;
+    height: 100%;
+    border-right: 1px solid grey;
+  }
+  .left-navbar .container-fluid{
+    width: 100%;
+    height: 40%;
+    padding: 0;
+  }
+  .left-navbar.navbar-expand-lg{
+    height: auto;
+  }
+  .left-navbar .nav_edit{
+    width: 100%;
+    height: 55px;
+    padding: 10px 0;
+    background-color: #2B3033;
+    display: flex;
+    align-items: center;
+  }
+  .left-navbar .navbar-nav{
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+  }
+  /* CHAT LIST CONTACT */
+
+  .chat_list{
+    height: 60px;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
+  .chat_list .contact{
+    display: flex;
+    align-items: flex-start;
+    padding: 0 10px;
+
+  }
+  .chat_list span{
+    color: white;
+  }
+  .bio{
+    display: none;
+  }
+  .bio small{
+    color: #B1B3B5;
+
+  }
+  hr{
+    display: none;
   }
   ul.navbar-nav.me-auto.mb-2.mb-lg-0{
     margin-bottom: 0px;
@@ -423,29 +507,12 @@ input:hover, input:focus, input:active{
   .fa-edit{
     font-size: 15px;
   }
-  .image_profile{
-    border-radius: 50%;
-    height: 30px;
-    width: 30px;
-    border: 1px solid black;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    position: relative;
-    background-color: white;
-    overflow: hidden;
+  /* right */
+  .container.chat{
+    display: block;
+    width: 100%;
+    height: calc(100vh - 285px);
+    padding: 20px 10%;
+    overflow-y: auto;
   }
-  .image_profile img{
-    height: 40px;
-    width: 40px;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-
-  }
-  .contact small{
-    font-size: 12px;
-  }
-
 }

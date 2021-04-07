@@ -102,7 +102,6 @@ var app = new Vue({
         this.index = i;
       },
       data: function (date) {
-        // console.log(date);
         let separa = date.split(' ');
         let array1 = separa[0].split('/');
         let nuova_data = array1[2] + '-' + array1[1] + '-' + array1[0];
@@ -113,9 +112,13 @@ var app = new Vue({
         return newdata = `${ore}:${minuti}`;
       },
       add: function (contatto) {
+        let data = new Date();
+        let oras = data.getHours();
+        let minutos = data.getMinutes();
+        let newda = `${oras}:${minutos}`;
         if (this.inputext != '') {
           let messaggio = {
-            date: new Date(),
+            newda,
             text: this.inputext,
             status: 'sent'
           }
@@ -124,7 +127,7 @@ var app = new Vue({
         }
         window.setTimeout(function() {
          let messaggio = {
-           date: new Date(),
+           newda,
            text: 'ok',
            status: 'received'
           }
