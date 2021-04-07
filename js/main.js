@@ -113,9 +113,13 @@ var app = new Vue({
       },
       add: function (contatto) {
         let data = new Date();
+        console.log(data);
+        let gg = data.getDate() + "/";
+        let mm = data.getMonth() + 1 + "/";
+        let aaaa = data.getFullYear();
         let ora = data.getHours();
         let minuti= data.getMinutes();
-        let newd = `${ora}:${minuti}`;
+        let newd = `${gg}${mm}${aaaa} ${ora}:${minuti}`;
         if (this.inputext != '') {
           let messaggio = {
             date: newd,
